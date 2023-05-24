@@ -1,4 +1,55 @@
-nin un grillo pelao, gallito del selica
-nse que ponerte 
-lalalalal
-añadir bleblelelelel
+	ELIMINAR ESPACIOS
+  public int frasePalabra () {
+		int contador = 0;
+		cadena=cadena.replace(" ", "");
+		for (int i=0; i<cadena.length();i++) {
+			contador=i+1;
+			
+		}
+		
+		return contador;
+	}
+
+CANTIDAD CARACTER
+
+public int cantidadCaracter(char caracter) {
+		int contador=0;	
+		for (int i=0; i<cadena.length(); i++) {
+			if (cadena.charAt(i)==caracter) {
+				contador++;
+			}
+		}
+		return contador;
+	}
+  
+  NUMEROS CONSONANTES
+  
+  public int numero_Consonantes () {
+		
+		int cantidad=0;
+		for (int i=0;i<frase.length(); i++) {
+			if (frase.charAt(i)!='a' && frase.charAt(i)!='e' && frase.charAt(i)!='i' && frase.charAt(i)!='o' && frase.charAt(i)!='u') {
+				cantidad++;
+			}
+		}
+		
+		return cantidad;
+	}
+  
+  SIN VOCALES 
+  
+  	public String eliminarVocales() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < frase.length(); i++) {
+            char c = frase.charAt(i);
+            if (!esVocal(c)) {
+                sb.append(c);
+            }
+        }
+        return sb.toString();
+    }
+
+    public static boolean esVocal(char c) {
+        c = Character.toLowerCase(c);
+        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+    }
