@@ -9,6 +9,10 @@
 		
 		return contador;
 	}
+	
+BuscaVecesPalabra bvp1 = new BuscaVecesPalabra("Neuma es un payaso y Adrian tambien");
+System.out.println(bvp1.buscaVecesPalabra("payaso"));
+		
 
 CANTIDAD CARACTER
 
@@ -53,3 +57,17 @@ public int cantidadCaracter(char caracter) {
         c = Character.toLowerCase(c);
         return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
     }
+BUSCA VECES PALABRA 
+
+public int buscaVecesPalabra (String palabra) {
+		 int contador = 0;
+	        String[] palabras = frase.split(" ");
+	        for (String p : palabras) {
+	            if (p.equals(palabra)) {
+	                contador++;
+	            }
+	        }
+
+	    return contador;
+	}
+	
